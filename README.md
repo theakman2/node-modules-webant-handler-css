@@ -38,7 +38,7 @@ require("../path/to/styles.css");
 
 If a CSS file is included via the function style, the CSS will be inserted into the DOM at runtime.
 
-If on the other hand the CSS file is included via the comment style then the `require`d CSS will be added to the file at `cssDestPath` and will be added to the `{{internalCss}}`` variable which can be used within the handlebars template file at `htmlEntryPath`.
+If on the other hand the CSS file is included via the comment style then the `require`d CSS will be added to the file at `cssDestPath` and will be added to the `{{internalCss}}` variable which can be used within the handlebars template file at `htmlEntryPath`.
 
 Both `cssDestPath` and `htmlEntryPath` are optional settings that may be added to the webant configuration file. E.g:
 
