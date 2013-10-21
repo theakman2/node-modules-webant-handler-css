@@ -12,27 +12,51 @@ If for some reason you\'d like to use the module outside of webant, install as f
 
 ## Usage
 
-First ensure your `webant-config.js` file is populated with at least the following settings:
+Ensure the `css` handler is present in your webant configuration file.
 
-    module.exports.build = {
-        sourceDir:"path/to/src/",
-        destDir:"path/to/dest/",
-        js:{
-            start:"relative/path/to/main.js",
-            dest:"main.js"
-        },
-        css:{
-            dest:"relative/path/to/main.css"
-        },
-        index:{
-            start:"index.hbs",
-            dest:"index.html"
-        },
-        handlers:["css", "js"]
-    };
+An example configuration file which uses this handler may look like this:
 
-Then `require` a CSS file by calling `require("path/to/styles.css")`. It'll automatically be included in the file specified in `css.dest`.
-    
+````json
+{
+    "jsEntryPath":"%%base%%/src/js/main.js",
+    "jsDestPath":"%%base%%/build/main.js",
+    "handlers":{
+        "css":{}
+    }
+}
+````
+
+You may now `require` CSS files via the function style or the comment style:
+
+````javascript
+//=>require ../path/to/styles.css
+````
+
+````javascript
+require("../path/to/styles.css");
+````
+
+If a CSS file is included via the function style, the CSS will be inserted into the DOM at runtime.
+
+If on the other hand the CSS file is included via the comment style then the `require`d CSS will be added to the file at `cssDestPath` and will be added to the `{{internalCss}}`` variable which can be used within the handlebars template file at `htmlEntryPath`.
+
+Both `cssDestPath` and `htmlEntryPath` are optional settings that may be added to the webant configuration file. E.g:
+
+````json
+{
+    "jsEntryPath":"%%base%%/src/js/main.js",
+    "jsDestPath":"%%base%%/build/main.js",
+    "cssDestPath":"%%base%%/build/styles/css",
+    "htmlEntryPath":"%%base%%/src/index.hbs",
+    "htmlDestPath":"%%base%%/build/index.html",
+    "handlers":{
+        "css":{}
+    }
+}
+````
+
+See the [webant](https://github.com/theakman2/node-modules-webant) module for more information.
+
 ## Tests
 
     $ npm test
