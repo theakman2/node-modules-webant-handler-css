@@ -11,9 +11,13 @@
     "devDependencies":{
         "test":"0.6.x"
     },
+    "repositories":{
+        "type":"git",
+        "url":"git://github.com/theakman2/node-modules-webant-handler-css.git"
+    },
     "main":"./lib/index.js",
     "scripts":{
         "test":"node ./test/index.js"
     },
-    "licence":"MIT"
+    "license":"MIT"
 }
