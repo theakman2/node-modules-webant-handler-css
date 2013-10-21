@@ -1,0 +1,19 @@
+{
+    "name":"webant-handler-css",
+    "author":"A Kazim",
+    "description":"A handler for the webant module for CSS requires.",
+    "keywords":[
+        "ant",
+        "css",
+        "webant"
+    ],
+    "version":"0.3.0",
+    "devDependencies":{
+        "test":"0.6.x"
+    },
+    "main":"./lib/index.js",
+    "scripts":{
+        "test":"node ./test/index.js"
+    },
+    "licence":"MIT"
+}
