@@ -29,7 +29,7 @@ var tests = {
 			);
 			assert.equal(
 				content,
-				'require("@@css/addStylesheet")(".bla { color: red; }");',
+				'require("!@@css/addStylesheet")(".bla { color: red; }");',
 				"Handler should update with correct content."
 			);
 			done();
