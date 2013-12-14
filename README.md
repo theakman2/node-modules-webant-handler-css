@@ -32,6 +32,6 @@ require("../path/to/styles.css");
 
 See the [webant](https://github.com/theakman2/node-modules-webant) module for more information.
 
-## Tests
+## Tests [![Build Status](https://travis-ci.org/theakman2/node-modules-webant-handler-css.png?branch=master)](https://travis-ci.org/theakman2/node-modules-webant-handler-css)
 
     $ npm test

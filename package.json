@@ -9,7 +9,7 @@
     "css",
     "webant"
   ],
-  "version": "0.4.1",
+  "version": "1.0.0",
   "dependencies": {
     "js-string-escape": "1.0.x"
   },
@@ -25,12 +25,5 @@
   "scripts": {
     "test": "node ./test/index.js"
   },
-  "license": "MIT",
-  "readme": "# node-modules-webant-handler-css\n\n_Require CSS files with [webant](https://github.com/theakman2/node-modules-webant)_\n\n## Installation\n\nThere should be no need to install this module since it's required by the [webant](https://github.com/theakman2/node-modules-webant) module by default.\n\nIf for some reason you'd like to use the module outside of webant, install as follows:\n\n    $ npm install webant-handler-css\n\n## Usage\n\nEnsure the `css` handler is present in your webant configuration file. For example:\n\n````json\n{\n    \"entry\":\"src/js/main.js\",\n    \"dest\":\"build/main.js\",\n    \"handlers\":{\n        \"css\":{}\n    }\n}\n````\n\nYou may now `require` CSS files:\n\n````javascript\nrequire(\"../path/to/styles.css\");\n````\n\nSee the [webant](https://github.com/theakman2/node-modules-webant) module for more information.\n\n## Tests\n\n    $ npm test",
-  "readmeFilename": "README.md",
-  "bugs": {
-    "url": "https://github.com/theakman2/node-modules-webant-handler-css/issues"
-  },
-  "_id": "webant-handler-css@0.4.0",
-  "_from": "webant-handler-css@0.4.x"
+  "license": "MIT"
 }

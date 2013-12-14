@@ -1,9 +1,7 @@
 var fs = require("fs");
 var path = require("path");
 
-var Handler = require("../lib/index.js");
-
-var handler = new Handler();
+var handler = require("../lib/index.js");
 
 var tests = {
 	"test filetypes":function(assert) {
@@ -16,13 +14,13 @@ var tests = {
 		            "@@css/addStylesheet"
 		            ];
 		assert.deepEqual(
-			data.map(handler.willHandle),
+			data.map(function(fp){ return handler.willHandle(fp);}),
 			[false,false,true,true,false,true],
 			"Should handle the correct files."
 		);
 	},
 	"test correct file type":function(assert,done) {
-		handler.handle(__dirname+"/style.css",function(err,content){
+		handler.handle(__dirname+"/style.css",{},function(err,content){
 			assert.ok(
 				!err,
 				"There should be no errors handling this filetype."
@@ -36,7 +34,7 @@ var tests = {
 		});
 	},
 	"test correct file type 2":function(assert,done) {
-		handler.handle("@@css/addStylesheet",function(err,content){
+		handler.handle("@@css/addStylesheet",{},function(err,content){
 			assert.ok(
 				!err,
 				"There should be no errors handling this filetype."
