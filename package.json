@@ -1,29 +1,27 @@
 {
-  "name": "webant-handler-css",
-  "author": {
-    "name": "A Kazim"
-  },
-  "description": "A handler for the webant module for CSS requires.",
-  "keywords": [
-    "ant",
-    "css",
-    "webant"
-  ],
-  "version": "1.0.0",
-  "dependencies": {
-    "js-string-escape": "1.0.x"
-  },
-  "devDependencies": {
-    "extend": "1.2.x",
-    "test": "0.6.x"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/theakman2/node-modules-webant-handler-css.git"
-  },
-  "main": "./lib/index.js",
-  "scripts": {
-    "test": "node ./test/index.js"
-  },
-  "license": "MIT"
+	"name": "webant-handler-css",
+	"author": {
+		"name": "A Kazim"
+	},
+	"description": "A handler for the webant module for CSS requires.",
+	"keywords": ["ant", "css", "webant"],
+	"version": "2.0.0",
+	"dependencies": {
+		"js-string-escape": "1.0.x"
+	},
+	"devDependencies": {
+		"extend": "1.2.x",
+		"test": "0.6.x",
+		"shell-escape": "~0.0.1",
+		"webant": "~4.0.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/theakman2/node-modules-webant-handler-css.git"
+	},
+	"main": "./lib/index.js",
+	"scripts": {
+		"test": "node ./test/index.js"
+	},
+	"license": "MIT"
 }
