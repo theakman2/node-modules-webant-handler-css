@@ -5,7 +5,7 @@
 	},
 	"description": "A handler for the webant module for CSS requires.",
 	"keywords": ["ant", "css", "webant"],
-	"version": "3.0.0",
+	"version": "3.0.1",
 	"dependencies": {
 		"js-string-escape": "1.0.x"
 	},
